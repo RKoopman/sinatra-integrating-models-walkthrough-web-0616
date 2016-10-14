@@ -10,7 +10,7 @@ class App < Sinatra::Base
 
 
 post '/' do
-  @num_of_words = TextAnalyzer.new(params[:user_text]).count_of_words
+  @num_of_words = TextAnalyzer.new(params[:user_text])
   erb :results
 end
 
